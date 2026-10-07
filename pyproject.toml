@@ -1,6 +1,6 @@
 [project]
 name = "coordinated-mars-time"
-version = "0.1.0"
+version = "0.1.1"
 description = "Converts Earth UTC to Coordinated Mars Time and local Mars solar times."
 requires-python = ">=3.10"
 dependencies = []
