@@ -58,3 +58,10 @@ Two awkward edges the reader will hit:
 - `utc_to_cmt(dt)` — returns a `CoordinatedMarsTime`.
 - `coordinated_mars_time.core.local_mean_solar_time(dt, longitude_east)` —
   returns a `LocalMarsSolarTime`.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
